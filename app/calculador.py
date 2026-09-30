@@ -13,7 +13,6 @@ class Calculador(object):
     _functions = {
         'sin': lambda value: math.sin(math.radians(value)),
         'cos': lambda value: math.cos(math.radians(value)),
-        'tan': lambda value: math.tan(math.radians(value)),
         'sqrt': math.sqrt,
         'log': math.log10,
         'ln': math.log,

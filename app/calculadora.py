@@ -173,7 +173,6 @@ class Calculadora(object):
         # Botões de operações científicas
         self._BTN_SIN = tk.Button(master, text='sin', cnf=self.theme['BTN_DEFAULT'])
         self._BTN_COS = tk.Button(master, text='cos', cnf=self.theme['BTN_DEFAULT'])
-        self._BTN_TAN = tk.Button(master, text='tan', cnf=self.theme['BTN_DEFAULT'])
         self._BTN_LOG = tk.Button(master, text='log', cnf=self.theme['BTN_DEFAULT'])
         self._BTN_LN = tk.Button(master, text='ln', cnf=self.theme['BTN_DEFAULT'])
         self._BTN_FACTORIAL = tk.Button(master, text='n!', cnf=self.theme['BTN_DEFAULT'])
@@ -218,10 +217,9 @@ class Calculadora(object):
         self._BTN_RAIZ.grid(row=5, column=3, padx=1, pady=1)
 
         # Linha 6
-        self._BTN_TAN.grid(row=6, column=0, padx=1, pady=1)
-        self._BTN_LOG.grid(row=6, column=1, padx=1, pady=1)
-        self._BTN_LN.grid(row=6, column=2, padx=1, pady=1)
-        self._BTN_FACTORIAL.grid(row=6, column=3, padx=1, pady=1)
+        self._BTN_LOG.grid(row=6, column=0, padx=1, pady=1)
+        self._BTN_LN.grid(row=6, column=1, padx=1, pady=1)
+        self._BTN_FACTORIAL.grid(row=6, column=2, padx=1, pady=1)
 
         # Linha 7
         self._BTN_PI.grid(row=7, column=0, padx=1, pady=1)
@@ -248,7 +246,6 @@ class Calculadora(object):
         self._BTN_RAIZ['command'] = partial(self._set_operator_in_input, '**(1/2)')
         self._BTN_SIN['command'] = partial(self._insert_function_in_input, 'sin')
         self._BTN_COS['command'] = partial(self._insert_function_in_input, 'cos')
-        self._BTN_TAN['command'] = partial(self._insert_function_in_input, 'tan')
         self._BTN_LOG['command'] = partial(self._insert_function_in_input, 'log')
         self._BTN_LN['command'] = partial(self._insert_function_in_input, 'ln')
         self._BTN_FACTORIAL['command'] = self._apply_factorial
